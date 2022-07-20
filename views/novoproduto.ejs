@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+</head>
+<body>
+   <h1><%= title %></h1>
+   <p>Produtos.</p>
+   <p>Preencha os dados do produto.</p>
+   <form action="<%= action %>" method="POST">
+       <p>
+           <label>Nome do Produto:<input type="text" name="nomeProduto" value="<%=doc.nomeProduto %>" required/></label>
+       </p>
+       <p>
+        <label>Descrição do Produto:<input type="text" name="descProduto" value="<%=doc.descProduto %>" required/></label>
+        </p>
+       <p>
+        <label>Valor de compra:<input type="number" name="compraProduto" value="<%=doc.compraProduto %>" required/></label>
+       </p>
+       <p>
+        <label>Valor de venda:<input type="number" name="vendaProduto" value="<%=doc.vendaProduto %>" required/></label>
+       </p>
+       
+       <p>
+           <a href="/">Cancelar</a>| <input type="submit" value="Salvar"/>
+       </p>
+       <a href="/produto">Lista de Produtos</a>
+       
+   </form>
+</body>
+</html>

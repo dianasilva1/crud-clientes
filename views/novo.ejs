@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="/stylesheet/style.css"/>
+</head>
+<body>
+   <h1><%= title %></h1>
+   <p>Preencha os dados abaixo para salvar o cliente.</p>
+   <form action="<%= action %>" method="POST">
+       <p>
+           <label>Nome:<input type="text" name="nome" value="<%=doc.nome %>" required/></label>
+       </p>
+       <p>
+        <label>Idade:<input type="number" name="idade" value="<%=doc.idade %>" required/></label>
+       </p>
+       <p>
+        <label>UF:
+            <select name="uf">
+                <option <% if (doc.uf=='PR'){%> select <% } %> >PR</option>
+                <option <% if (doc.uf=='MS'){%> select <% } %> >MS</option>
+                <option <% if (doc.uf=='RO'){%> select <% } %> >RO</option>
+                <option <% if (doc.uf=='SP'){%> select <% } %> >SP</option>
+                <option <% if (doc.uf=='MT'){%> select <% } %> >MT</option>
+            </select>
+ 
+        </label>
+       </p>
+       <p>
+           <a href="/">Cancelar</a>| <input type="submit" value="Salvar"/>
+       </p>
+       <a href="/index">Lista de Cliente</a>
+       
+   </form>
+</body>
+</html>
